@@ -3,9 +3,24 @@ syntax = "proto3";
 option go_package = "/balances";
 
 message EmmitBalanceRequest
-{
+{ 
     string id = 1;
     string address = 2;
     string currency = 3;
     int32 amount = 4;
+}
+
+message EmmitBalanceResponse
+{
+    string id = 1;
+    EmmitBalanceState state = 2;
+    string error_code = 3;
+}
+
+enum EmmitBalanceState
+{
+    UNRECOGNIZED = 0;
+    NEW = 1;
+    IN_PROGRESS = 2;
+    DONE = 3;
 }
