@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "/balances";
+
+message EmmitBalanceRequest
+{
+    string id = 1;
+    string address = 2;
+    string currency = 3;
+    int32 amount = 4;
+}
