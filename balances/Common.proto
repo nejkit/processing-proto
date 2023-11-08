@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "/balances";
+
+message BalanceInfo 
+{
+    string id = 1;
+    string currency = 2;
+    float actual_balance = 3;
+    float freeze_balance = 4;
+}
+
+message WalletInfo
+{
+    string address = 1;
+    uint64 created = 2;
+    bool is_deleted = 3;
+    repeated BalanceInfo balance_infos = 4;
+}
