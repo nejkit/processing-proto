@@ -17,3 +17,15 @@ message WalletInfo
     bool is_deleted = 3;
     repeated BalanceInfo balance_infos = 4;
 }
+
+message GetWalletInfoRequest
+{
+    string id = 1;
+    string address = 2;
+}
+
+message GetWalletInfoResponse
+{
+    string id = 1;
+    WalletInfo wallet_info = 2;
+}
