@@ -6,8 +6,8 @@ message BalanceInfo
 {
     string id = 1;
     string currency = 2;
-    float actual_balance = 3;
-    float freeze_balance = 4;
+    double actual_balance = 3;
+    double freeze_balance = 4;
 }
 
 message WalletInfo
