@@ -66,7 +66,10 @@ message OrderInfo {
 
 message GetOrderRequest {
     string id = 1;
-    string order_id = 2;
+    oneof value {
+        string order_id = 2;
+        string wallet_id = 3;
+    }
 }
 
 message GetOrderResponse {
