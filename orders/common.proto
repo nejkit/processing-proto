@@ -34,6 +34,7 @@ message CreateOrderRequest {
     float init_price = 5;
     float init_volume = 6;
     OrderType order_type = 7;
+    string exchange_wallet = 8;
 }
 
 message CreateOrderResponse {
@@ -60,6 +61,7 @@ message OrderInfo {
     uint64 creation_date = 10;
     uint64 updated_date = 11;
     uint64 expiration_date = 12;
+    string exchange_wallet = 13;
 }
 
 message GetOrderRequest {
