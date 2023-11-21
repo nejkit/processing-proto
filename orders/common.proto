@@ -75,6 +75,6 @@ message GetOrderRequest {
 
 message GetOrderResponse {
     string id = 1;
-    OrderInfo order_data = 2;
+    repeated OrderInfo order_data = 2;
 }
 
