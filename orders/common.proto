@@ -40,6 +40,7 @@ message CreateOrderRequest {
 message CreateOrderResponse {
     string id = 1;
     string order_id = 2;
+    string error_message = 3;
 }
 
 message MatchingData {
@@ -75,6 +76,5 @@ message GetOrderRequest {
 message GetOrderResponse {
     string id = 1;
     OrderInfo order_data = 2;
-    string error_message = 3;
 }
 
