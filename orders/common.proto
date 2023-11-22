@@ -28,13 +28,12 @@ enum OrderState {
 
 message CreateOrderRequest {
     string id  = 1;
-    string sell_curency  = 2;
-    string buy_currency = 3;
-    Direction direction = 4;
-    float init_price = 5;
-    float init_volume = 6;
-    OrderType order_type = 7;
-    string exchange_wallet = 8;
+    string currency_pair  = 2;
+    Direction direction = 3;
+    float init_price = 4;
+    float init_volume = 5;
+    OrderType order_type = 6;
+    string exchange_wallet = 7;
 }
 
 message CreateOrderResponse {
@@ -51,18 +50,17 @@ message MatchingData {
 
 message OrderInfo {
     string id = 1;
-    string sell_curency  = 2;
-    string buy_currency = 3;
-    Direction direction = 4;
-    float init_price = 5;
-    float init_volume = 6;
-    OrderType order_type = 7;
-    OrderState order_state = 8;
-    repeated MatchingData match_infos = 9;
-    uint64 creation_date = 10;
-    uint64 updated_date = 11;
-    uint64 expiration_date = 12;
-    string exchange_wallet = 13;
+    string currency_pair = 2;
+    Direction direction = 3;
+    float init_price = 4;
+    float init_volume = 5;
+    OrderType order_type = 6;
+    OrderState order_state = 7;
+    repeated MatchingData match_infos = 8;
+    uint64 creation_date = 9;
+    uint64 updated_date = 10;
+    uint64 expiration_date = 11;
+    string exchange_wallet = 12;
 }
 
 message GetOrderRequest {
