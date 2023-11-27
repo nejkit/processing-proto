@@ -2,7 +2,9 @@ syntax = "proto3";
 
 option go_package = "/balances";
 
-message BalanceInfo 
+import "errors.proto";
+
+message BalanceInfo
 {
     string id = 1;
     string currency = 2;
@@ -49,5 +51,5 @@ message LockBalanceResponse
 {
     string id = 1;
     LockBalanceStatus state = 2;
-    string error_message = 3;
+    ErrorMessage error_message = 3;
 }

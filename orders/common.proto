@@ -2,29 +2,10 @@ syntax = "proto3";
 
 option go_package = "/orders";
 
-package goprocessingproto.orders;
+package orders;
 
-enum Direction {
-    DIRECTION_TYPE_NONE = 0;
-    DIRECTION_TYPE_SELL = 1;
-    DIRECTION_TYPE_BUY = 2;
-}
-
-enum OrderType {
-    ORDER_TYPE_NONE = 0;
-    ORDER_TYPE_MARKET = 1;
-    ORDER_TYPE_LIMIT = 2;
-}
-
-enum OrderState {
-    ORDER_STATE_NONE = 0;
-    ORDER_STATE_NEW = 1;
-    ORDER_STATE_IN_PROCESS = 2;
-    ORDER_STATE_PART_FILL = 3;
-    ORDER_STATE_FILL = 4;
-    ORDER_STATE_DONE = 5;
-    ORDER_STATE_REJECT = 6;
-}
+import "enums.proto";
+import "errors.proto";
 
 message CreateOrderRequest {
     string id  = 1;
@@ -39,7 +20,7 @@ message CreateOrderRequest {
 message CreateOrderResponse {
     string id = 1;
     string order_id = 2;
-    string error_message = 3;
+    ErrorMessage error = 3;
 }
 
 message MatchingData {
