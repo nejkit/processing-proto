@@ -27,6 +27,8 @@ message MatchingData {
     float fill_price = 1;
     float fill_volume = 2;
     uint64 date = 3;
+    MatchState state = 4;
+    string transfer_id = 5;
 }
 
 message OrderInfo {

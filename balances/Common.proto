@@ -53,3 +53,31 @@ message LockBalanceResponse
     LockBalanceStatus state = 2;
     ErrorMessage error_message = 3;
 }
+
+message TransferOptions {
+    string address = 1;
+    string currency = 2;
+    float amount = 3;
+}
+
+message CreateTransferRequest {
+    string id = 1;
+    TransferOptions sender_data = 2;
+    TransferOptions recepient_data = 3;
+}
+
+enum TransferState {
+    TRANSFER_STATE_NONE = 0;
+    TRANSFER_STATE_NEW = 1;
+    TRANSFER_STATE_IN_PROGRESS = 2;
+    TRANSFER_STATE_DONE = 3;
+    TRANSFER_STATE_REJECT = 4;
+}
+
+message Transfer {
+    string id = 1;
+    TransferOptions sender_data = 2;
+    TransferOptions recepient_data = 3;
+    TransferState state = 4;
+    ErrorMessage error = 5;
+}
