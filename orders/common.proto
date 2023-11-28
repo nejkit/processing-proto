@@ -54,6 +54,6 @@ message GetOrderRequest {
 
 message GetOrderResponse {
     string id = 1;
-    repeated OrderInfo order_data = 2;
+    OrderInfo order_data = 2;
 }
 
