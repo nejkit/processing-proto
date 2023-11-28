@@ -20,7 +20,7 @@ message CreateOrderRequest {
 message CreateOrderResponse {
     string id = 1;
     string order_id = 2;
-    ErrorMessage error = 3;
+    OrderErrorMessage error = 3;
 }
 
 message MatchingData {

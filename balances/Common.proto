@@ -51,7 +51,7 @@ message LockBalanceResponse
 {
     string id = 1;
     LockBalanceStatus state = 2;
-    ErrorMessage error_message = 3;
+    BalanceErrorMessage error_message = 3;
 }
 
 message TransferOptions {
@@ -79,5 +79,5 @@ message Transfer {
     TransferOptions sender_data = 2;
     TransferOptions recepient_data = 3;
     TransferState state = 4;
-    ErrorMessage error = 5;
+    BalanceErrorMessage error = 5;
 }
