@@ -11,6 +11,6 @@ enum OrdersErrorCodes {
 }
 
 message OrderErrorMessage {
-    OrderErrorMessage eror_code = 1;
+    OrdersErrorCodes eror_code = 1;
     string message = 2;
 }
