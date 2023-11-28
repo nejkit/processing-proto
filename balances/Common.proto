@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "/balances";
 
-import "errors.proto";
+import "balances_errors.proto";
 
 message BalanceInfo
 {

@@ -4,8 +4,8 @@ option go_package = "/orders";
 
 package orders;
 
-import "enums.proto";
-import "errors.proto";
+import "orders_enums.proto";
+import "orders_errors.proto";
 
 message CreateOrderRequest {
     string id  = 1;
