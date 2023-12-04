@@ -57,3 +57,6 @@ message GetOrderResponse {
     OrderInfo order_data = 2;
 }
 
+message MatchOrderRequest {
+    string id = 1;
+}
