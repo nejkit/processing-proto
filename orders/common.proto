@@ -6,13 +6,14 @@ package orders;
 
 import "orders_enums.proto";
 import "orders_errors.proto";
+import "google/protobuf/timestamp.proto";
 
 message CreateOrderRequest {
     string id  = 1;
     string currency_pair  = 2;
     Direction direction = 3;
-    float init_price = 4;
-    float init_volume = 5;
+    double init_price = 4;
+    double init_volume = 5;
     OrderType order_type = 6;
     string exchange_wallet = 7;
 }
@@ -26,7 +27,7 @@ message CreateOrderResponse {
 message MatchingData {
     float fill_price = 1;
     float fill_volume = 2;
-    uint64 date = 3;
+    google.protobuf.Timestamp date = 3;
     MatchState state = 4;
     string transfer_id = 5;
 }
@@ -40,9 +41,9 @@ message OrderInfo {
     OrderType order_type = 6;
     OrderState order_state = 7;
     repeated MatchingData match_infos = 8;
-    uint64 creation_date = 9;
-    uint64 updated_date = 10;
-    uint64 expiration_date = 11;
+    google.protobuf.Timestamp creation_date = 9;
+    google.protobuf.Timestamp updated_date = 10;
+    google.protobuf.Timestamp expiration_date = 11;
     string exchange_wallet = 12;
 }
 

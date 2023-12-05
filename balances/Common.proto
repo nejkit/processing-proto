@@ -37,7 +37,7 @@ message LockBalanceRequest
     string id = 1;
     string address = 2;
     string currency  = 3;
-    float amount = 4;
+    double amount = 4;
 }
 
 enum LockBalanceStatus {
@@ -59,13 +59,13 @@ message UnLockBalanceRequest
     string id = 1;
     string address = 2;
     string currency = 3;
-    float amount = 4;
+    double amount = 4;
 }
 
 message TransferOptions {
     string address = 1;
     string currency = 2;
-    float amount = 3;
+    double amount = 3;
 }
 
 message CreateTransferRequest {
