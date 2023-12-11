@@ -35,4 +35,6 @@ message UpdateQuoteRequest {
     double volume = 4;
     double filled_price = 5;
     double filled_volume = 6;
+    string currency_pair = 7;
+    int32 direction = 8;
 }
