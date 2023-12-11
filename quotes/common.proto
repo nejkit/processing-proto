@@ -22,3 +22,17 @@ message PriceToVolumeInfo {
     double price = 1;
     double volume = 2;
 }
+
+enum QuoteOperationType {
+    QUOTE_OPERATION_TYPE_PLACE_ORDER = 0;
+    QUOTE_OPERATION_TYPE_REMOVE_ORDER = 1;
+}
+
+message UpdateQuoteRequest {
+    string id = 1;
+    QuoteOperationType operation_type = 2;
+    double price = 3;
+    double volume = 4;
+    double filled_price = 5;
+    double filled_volume = 6;
+}
