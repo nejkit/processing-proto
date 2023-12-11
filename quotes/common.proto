@@ -37,4 +37,5 @@ message UpdateQuoteRequest {
     double filled_volume = 6;
     string currency_pair = 7;
     int32 direction = 8;
+    int64 nonce = 9;
 }
