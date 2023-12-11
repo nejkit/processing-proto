@@ -6,9 +6,17 @@ message MarketDeepthRequest {
     string id = 1;
 }
 
+message QuotesInfo {
+    string currency_pair = 1;
+    int32 direction = 2;
+    double filled_price = 3;
+    double filled_volume = 4;
+}
+
 message MarketDeepthResponse {
     string id = 1;
     repeated MarketDeepthInfo market_deepth_infos = 2;
+    repeated QuotesInfo quotes_infos = 3;
 
 }
 
