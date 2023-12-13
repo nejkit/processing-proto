@@ -42,6 +42,16 @@ message OrderInfo {
     string exchange_wallet = 15;
 }
 
+message DeleteOrderRequest {
+    string id = 1;
+    string order_id = 2;
+}
+
+message DeleteOrderResponse {
+    string id = 1;
+    OrderErrorMessage error_message = 2;
+}
+
 message GetOrderRequest {
     string id = 1;
     string order_id = 2;
